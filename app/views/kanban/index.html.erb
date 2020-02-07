@@ -17,7 +17,7 @@
 <form id="form1" action="" method="GET">
 <!-- 開閉パーツ -->
 <fieldset id="upper_filters" class="collapsible collapsed">
-  <legend onclick="toggleFieldset(this);">Filter</legend>
+  <legend onclick="toggleFieldset(this);">Filters</legend>
   <div style="display: none;">
     <table>
       <tr>
@@ -108,7 +108,7 @@
 </fieldset>
 <!-- 開閉パーツ -->
 <fieldset id="lower_filters" class="collapsible collapsed">
-  <legend onclick="toggleFieldset(this);">field</legend>
+  <legend onclick="toggleFieldset(this);">Fields</legend>
   <div style="display: none;">
     <table>
       <tr>
@@ -129,11 +129,11 @@
 </form>
 <!-- 更新ボタン・クリアボタン -->
 <p class="buttons">
-  <a href="#" onclick="$('#form1').submit(); return false;" class="icon icon-checked">Application</a>
+  <a href="#" onclick="$('#form1').submit(); return false;" class="icon icon-checked">Apply</a>
   <% if @project_id.blank? == true then %>
     <a class="icon icon-reload" href="/kanban?clear=1">clear</a>
   <% else %>
-    <a class="icon icon-reload" href="/kanban?clear=1&project_id=<%= @project_id %>">clear</a>
+    <a class="icon icon-reload" href="/kanban?clear=1&project_id=<%= @project_id %>">Clear</a>
   <% end %>
 </p>
 <!-- フォーム -->
